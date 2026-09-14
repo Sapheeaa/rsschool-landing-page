@@ -1,0 +1,750 @@
+body {
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.top-background-wrapper {
+  background: url("img/start-screen-gradient-background.jpg") center/cover no-repeat;
+  width: 100%;
+  overflow: visible;
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+.header-container {
+  padding-top: 31px;
+  padding-bottom: 74px;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo-link {
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  gap: 35px;
+  padding: 0;
+  margin: 0;
+}
+.nav-item a {
+  text-decoration: none;
+  color: #cdcdcd;
+  font-family: "Arial";
+  line-height: 1.6;
+  font-size: 15px;
+  white-space: nowrap;
+}
+.header-logo h1 {
+  font-family: "Georgia";
+  font-size: 32px;
+  margin: 0;
+  line-height: 1.1;
+  color: #f1cdb3;
+  font-weight: normal;
+}
+.header-logo h1:hover {
+  -webkit-text-stroke: 1px black;
+}
+.header-logo p:hover {
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.header-logo p {
+  color: #ffffff;
+  font-size: 13px;
+  letter-spacing: 10%;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+.start-screen-text {
+  color: #cdcdcd;
+  margin: 42px 0;
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  font-family: "Arial";
+}
+
+.start-screen-container h2 {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.3;
+  font-family: "Georgia";
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: normal;
+}
+
+.start-screen {
+  width: 100%;
+}
+.start-screen-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 728px;
+  overflow: hidden;
+  padding-top: 89px;
+}
+.start-screen-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 460px;
+  position: relative;
+  z-index: 2;
+  align-items: flex-start;
+}
+.start-screen-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.start-screen-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.start-screen-button {
+  background: #f1cdb3;
+  border-radius: 40px;
+  color: #292929;
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: "Georgia";
+  padding: 15px 45px;
+  text-decoration: none;
+}
+.about-pet-image {
+  margin-right: 120px;
+  width: 300px;
+  height: 408px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.about-text-content {
+  width: 430px;
+}
+.about-text-content h3 {
+  font-family: Georgia;
+  font-size: 35px;
+  color: #545454;
+  letter-spacing: 6%;
+  line-height: 1.3;
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+.about-text-content p {
+  font-family: Arial;
+  font-size: 15px;
+  color: #4c4c4c;
+  line-height: 1.6;
+  margin-top: 25px;
+}
+.pets {
+  background-color: #f6f6f6;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+
+.pets-content {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider {
+  width: 1200px;
+  height: 435px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pet-card {
+  background-color: #fafafa;
+  margin: 0px 45px;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9px;
+  gap: 30px;
+}
+
+.pet-card p {
+  color: #545454;
+  font-family: "Georgia";
+  font-size: 20px;
+  letter-spacing: 6%;
+  line-height: 100%;
+  margin: 0;
+}
+
+.pets-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  max-width: 100%;
+}
+.pet-card-image {
+  width: 270px;
+  height: 270px;
+}
+.pets-text {
+  font-weight: normal;
+  font-family: "Georgia";
+  font-size: 35px;
+  letter-spacing: 6%;
+  line-height: 1.3;
+  color: #545454;
+  height: 90px;
+  width: 400px;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.pet-card-button {
+  border: 2px solid #f1cdb3;
+  border-radius: 40px;
+  color: #292929;
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: "Georgia";
+  padding: 15px 45px;
+  margin-bottom: 30px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.pets-content-button {
+  background: #f1cdb3;
+  margin-top: 55px;
+  border-radius: 40px;
+  color: #292929;
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: "Georgia";
+  padding: 15px 45px;
+  text-decoration: none;
+}
+
+.slider-button-right,
+.slider-button-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  border: 2px solid #f1cdb3;
+  color: #292929;
+  box-sizing: border-box;
+  height: 52px;
+  width: 52px;
+  flex-shrink: 0;
+}
+
+.help {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.help-cards {
+  display: grid;
+  grid-template-columns: auto 120px auto 120px auto 120px auto 120px auto;
+  justify-content: center;
+  gap: 55px 0;
+  max-width: 1026px;
+  margin-bottom: 100px;
+}
+
+.help-card {
+  display: flex;
+  margin: 0 !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  width: fit-content;
+  gap: 30px;
+}
+
+.help-card:nth-child(1) {
+  grid-column: 1;
+}
+.help-card:nth-child(2) {
+  grid-column: 3;
+}
+.help-card:nth-child(3) {
+  grid-column: 5;
+}
+.help-card:nth-child(4) {
+  grid-column: 7;
+}
+.help-card:nth-child(5) {
+  grid-column: 9;
+}
+.help-card:nth-child(6) {
+  grid-column: 2;
+  transform: translateX(3px);
+}
+.help-card:nth-child(7) {
+  grid-column: 4;
+  transform: translateX(-58px);
+}
+.help-card:nth-child(8) {
+  grid-column: 6;
+  transform: translateX(-18px);
+}
+.help-card:nth-child(9) {
+  grid-column: 8;
+  transform: translateX(-7px);
+}
+
+.help-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  font-size: 35px;
+  font-family: "Georgia";
+  letter-spacing: 6%;
+  line-height: 1.3;
+  color: #545454;
+  font-weight: normal;
+}
+
+.help-card h4 {
+  font-family: "Georgia";
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 6%;
+  color: #545454;
+  font-weight: normal;
+  margin: 0;
+}
+
+.help-card img {
+  height: 60px;
+  width: 60px;
+}
+
+.donation {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.donation-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 915px;
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+.donation-content img {
+  height: 261px;
+  width: 505px;
+}
+.donation-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.donation-info h3 {
+  font-family: "Georgia";
+  font-size: 35px;
+  line-height: 1.3;
+  letter-spacing: 6%;
+  font-weight: normal;
+  color: #545454;
+  margin: 0;
+}
+
+.donation-info h5 {
+  font-family: "Georgia";
+  font-size: 15px;
+  line-height: 1.1;
+  letter-spacing: 6%;
+  font-weight: normal;
+  color: #545454;
+  margin: 0;
+}
+
+.credit-card-number h4 {
+  color: #545454;
+  font-family: "Georgia";
+  letter-spacing: 6%;
+  line-height: 1.15;
+  font-size: 20px;
+  margin: 0;
+  font-weight: normal;
+}
+.credit-card-ico img {
+  height: 23px;
+  width: 30px;
+}
+
+.credit-card p {
+  color: #b2b2b2;
+  font-family: "Arial";
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 20px;
+}
+
+.credit-card-number {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  white-space: nowrap;
+  background-color: #f1cdb3;
+  border-radius: 9px;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.footer {
+  background: url("footer-gradient-background.png") center/cover no-repeat;
+  padding: 40px 40px 0 40px; /* Верхние отступы */
+  margin-top: 0; /* Сбрасываем любые верхние отступы */
+  position: relative; /* Обычный поток документа */
+}
+
+.footer-content-info-contacts h3 {
+  margin: 0;
+  font-size: 35px;
+  color: #ffffff;
+  font-family: "Georgia";
+  letter-spacing: 6%;
+  line-height: 1.3;
+  font-weight: normal;
+}
+
+.footer-content-info-locations h3 {
+  margin: 0;
+  font-size: 35px;
+  color: #ffffff;
+  font-family: "Georgia";
+  letter-spacing: 6%;
+  line-height: 1.3;
+  font-weight: normal;
+}
+
+.footer-content-image img {
+  height: 310px;
+  width: 300px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 160px;
+}
+
+.footer-content-info {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  gap: 160px;
+}
+
+.footer-content-info-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 40px;
+  margin-top: 16px;
+  height: fit-content;
+}
+.footer-content-info-locations {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 34px;
+  margin-bottom: 40px;
+  margin-top: 16px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+}
+.footer-links h4 {
+  color: #f1cdb3;
+  font-size: 20px;
+  font-family: "Georgia";
+  letter-spacing: 6%;
+  line-height: 1.15;
+  font-weight: normal;
+  margin: 0;
+}
+
+.header__white {
+  height: 120px;
+}
+.white__bg {
+  background: #ffffff;
+}
+
+.white__bg h1 {
+  color: #545454;
+}
+
+.white__bg p {
+  color: #292929;
+}
+
+.white__bg a {
+  color: #545454;
+}
+
+.button__white_bg {
+  margin-bottom: 35px;
+}
+.our__pets__cards {
+  display: grid;
+  /* Меняем repeat(4...) на auto-fit, чтобы карточки переносились автоматически */
+  grid-template-columns: repeat(auto-fit, 270px);
+  justify-content: center;
+  gap: 24px 40px;
+  max-width: 1300px; /* Чтобы блок не разлетался слишком широко */
+  margin: 0 auto 47px auto; /* Центрируем и оставляем отступ 100px снизу */
+}
+
+.our__pet__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.our__pet__card p {
+  margin: 0;
+  font-family: Georgia;
+  font-size: 20px;
+  color: #545454;
+  letter-spacing: 6%;
+  line-height: 100%;
+}
+
+.slider-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-btn-left {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #cdcdcd;
+  color: #cdcdcd;
+  background-color: #f6f6f6;
+}
+
+.nav-btn-right {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #f1cdb3;
+  color: #000000;
+  background-color: #f6f6f6;
+}
+
+.nav-btn-active-page {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #f1cdb3;
+  border: 2px solid #f1cdb3;
+
+  color: #000000;
+}
+.show-on-mobile {
+  display: none;
+}
+
+.start-scree-button-block {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+/* Планшетная версия (768px - 1279px) */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .container {
+    max-width: 1279px;
+    padding: 0 30px;
+  }
+  .header-logo h1 {
+    font-size: 35px;
+  }
+
+  .header-container {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 60px;
+  }
+  .start-screen-container {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 1015px;
+  }
+
+  .start-screen-image {
+    height: 593px;
+    width: 569px;
+  }
+  .about-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .about-pet-image {
+    margin-right: 0;
+  }
+  .start-scree-button-block {
+    display: flex;
+    justify-content: center;
+  }
+  .slider {
+    width: 708px;
+  }
+  .pet-card {
+    margin: 0px;
+  }
+  .pets-cards {
+    gap: 40px;
+    margin-left: 12px;
+    margin-right: 12px;
+    overflow: hidden;
+  }
+  .pets-content {
+    width: 708px;
+  }
+  .pet-card-woody {
+    display: none;
+  }
+
+  .help-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px 60px;
+    max-width: 630px;
+  }
+  .help-card:nth-child(n) {
+    transform: none;
+    grid-column: auto;
+  }
+  .help-card {
+    height: 113px;
+    width: 170px;
+  }
+
+  .donation-content {
+    flex-direction: column-reverse;
+    gap: 60px;
+    margin-top: 78px;
+    margin-bottom: 100px;
+  }
+
+  .donation-info {
+    width: 380px;
+    justify-content: center;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 65px;
+  }
+  .footer {
+    padding: 30px 64px 0px 64px;
+  }
+  .footer-content-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hide-on-mobile {
+    display: none;
+  }
+  .footer-content-info {
+    gap: 30px;
+  }
+  .show-on-mobile {
+    display: block;
+  }
+
+  .about-text-content p {
+    margin-bottom: 0px;
+  }
+  .credit-card p {
+    margin-bottom: 0px;
+  }
+  .pet-card-button {
+    padding: 15px 45px;
+  }
+
+  .credit-card-number {
+    width: fit-content;
+    padding: 7px 15px;
+  }
+
+  .footer-content-info-contacts {
+    margin-top: 0px;
+    width: fit-content;
+    margin-bottom: 0px;
+  }
+
+  .footer-content-info-locations {
+    margin-top: 0px;
+    width: fit-content;
+    gap: 32px;
+    margin-bottom: 0px;
+  }
+}
