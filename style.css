@@ -445,7 +445,7 @@ html {
 }
 
 .footer {
-  background: url("footer-gradient-background.png") center/cover no-repeat;
+  background: url("img/footer-gradient-background.png") center/cover no-repeat;
   padding: 40px 40px 0 40px; /* Верхние отступы */
   margin-top: 0; /* Сбрасываем любые верхние отступы */
   position: relative; /* Обычный поток документа */
