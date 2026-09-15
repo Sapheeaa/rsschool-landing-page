@@ -748,3 +748,51 @@ html {
     margin-bottom: 0px;
   }
 }
+
+/* темная тема */
+.theme-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70px;
+  height: 35px;
+  background: #ffffff;
+  border: 2px solid #d4c5b9;
+  border-radius: 99px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  padding: 5px;
+}
+
+html.dark body,
+html.dark .donation,
+html.dark .header__white,
+html.dark .help,
+html.dark .pets,
+html.dark .header- {
+  background: #382c24;
+  color: #cdcdcd;
+}
+
+html.dark .slider {
+  background: #382c24;
+  border-color: #6b5b52;
+}
+html.dark .slider-button-left,
+html.dark .slider-button-right,
+html.dark .pets-text,
+html.dark .about-text-content h3,
+html.dark .about-text-content p,
+html.dark .help-title,
+html.dark .help-card h4,
+html.dark .donation-info h3,
+html.dark .donation-info h5 {
+  color: #cdcdcd;
+}
+.theme-switch input {
+  display: none; /* Скрываем чекбокс */
+}
+.theme-switch {
+  display: inline-block;
+  cursor: pointer;
+}
