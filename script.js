@@ -1,7 +1,7 @@
 const toggleCheckbox = document.getElementById("theme-toggle");
 const htmlElement = document.documentElement;
 
-const savedTheme = localStorage.getItem("theme");
+const savedTheme = sessionStorage.getItem("theme");
 // если в памяти выбрана тема дарк, то добавляем к тегу html стили дарк и ставим чекбокс в положение true
 if (savedTheme === "dark") {
   htmlElement.classList.add("dark");
@@ -12,9 +12,9 @@ if (savedTheme === "dark") {
 toggleCheckbox.addEventListener("change", function () {
   if (this.checked) {
     htmlElement.classList.add("dark");
-    localStorage.setItem("theme", "dark");
+    sessionStorage.setItem("theme", "dark");
   } else {
     htmlElement.classList.remove("dark");
-    localStorage.setItem("theme", "light");
+    sessionStorage.setItem("theme", "light");
   }
 });

@@ -39,11 +39,16 @@ html {
 }
 .nav-item a {
   text-decoration: none;
+  display: inline-block;
   color: #cdcdcd;
   font-family: "Arial";
   line-height: 1.6;
   font-size: 15px;
   white-space: nowrap;
+  transition: transform 0.3s ease;
+}
+.nav-item a:hover {
+  transform: translateY(-3px);
 }
 .header-logo h1 {
   font-family: "Georgia";
@@ -134,6 +139,7 @@ html {
   font-family: "Georgia";
   padding: 15px 45px;
   text-decoration: none;
+  transition: transform 0.3s ease;
 }
 .about-pet-image {
   margin-right: 120px;
@@ -200,6 +206,11 @@ html {
   align-items: center;
   border-radius: 9px;
   gap: 30px;
+  transition: transform 0.3s ease;
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
 }
 
 .pet-card p {
@@ -236,7 +247,8 @@ html {
   text-align: center;
 }
 
-.pet-card-button {
+.pet-card-button,
+.pet-category-btn {
   border: 2px solid #f1cdb3;
   border-radius: 40px;
   color: #292929;
@@ -247,7 +259,21 @@ html {
   margin-bottom: 30px;
   text-decoration: none;
   box-sizing: border-box;
+  transition: transform 0.3s ease;
 }
+
+.pets-category {
+  display: flex;
+  gap: 15px;
+}
+.pet-category-btn:hover {
+  transform: translateY(-3px);
+}
+
+.active-category-btn {
+  background-color: #f1cdb3;
+}
+
 .pets-content-button {
   background: #f1cdb3;
   margin-top: 55px;
@@ -258,6 +284,7 @@ html {
   font-family: "Georgia";
   padding: 15px 45px;
   text-decoration: none;
+  transition: transform 0.3s ease;
 }
 
 .slider-button-right,
@@ -273,6 +300,7 @@ html {
   height: 52px;
   width: 52px;
   flex-shrink: 0;
+  transition: transform 0.3s ease;
 }
 
 .help {
@@ -509,11 +537,15 @@ html {
 
 .footer-links {
   display: flex;
+
   align-items: center;
   gap: 20px;
   text-decoration: none;
+  transition: transform 0.3s ease;
 }
-.footer-links h4 {
+.footer-links h4,
+.footer-phone {
+  text-decoration: none;
   color: #f1cdb3;
   font-size: 20px;
   font-family: "Georgia";
@@ -521,8 +553,13 @@ html {
   line-height: 1.15;
   font-weight: normal;
   margin: 0;
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
 
+.footer-links:hover {
+  transform: translateY(-3px);
+}
 .header__white {
   height: 120px;
 }
@@ -544,6 +581,7 @@ html {
 
 .button__white_bg {
   margin-bottom: 35px;
+  transition: transform 0.3s ease;
 }
 .our__pets__cards {
   display: grid;
@@ -561,8 +599,11 @@ html {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  transition: transform 0.3s ease;
 }
-
+.our__pet__card:hover {
+  transform: translateY(-7px);
+}
 .our__pet__card p {
   margin: 0;
   font-family: Georgia;
@@ -570,6 +611,7 @@ html {
   color: #545454;
   letter-spacing: 6%;
   line-height: 100%;
+  flex-grow: 1;
 }
 
 .slider-nav {
@@ -586,6 +628,7 @@ html {
   border: 2px solid #cdcdcd;
   color: #cdcdcd;
   background-color: #f6f6f6;
+  transition: transform 0.3s ease;
 }
 
 .nav-btn-right {
@@ -595,6 +638,7 @@ html {
   border: 2px solid #f1cdb3;
   color: #000000;
   background-color: #f6f6f6;
+  transition: transform 0.3s ease;
 }
 
 .nav-btn-active-page {
@@ -603,6 +647,7 @@ html {
   height: 50px;
   background-color: #f1cdb3;
   border: 2px solid #f1cdb3;
+  transition: transform 0.3s ease;
 
   color: #000000;
 }
@@ -728,6 +773,7 @@ html {
   }
   .pet-card-button {
     padding: 15px 45px;
+    transition: transform 0.3s ease;
   }
 
   .credit-card-number {
@@ -747,6 +793,18 @@ html {
     gap: 32px;
     margin-bottom: 0px;
   }
+}
+
+.start-screen-button:hover,
+.slider-button-left:hover,
+.slider-button-right:hover,
+.pet-card-button:hover,
+.pets-content-button:hover,
+.nav-btn-left:hover,
+.nav-btn-right:hover,
+.nav-btn-active-page {
+  background-color: #c485598c;
+  transform: translateY(-3px);
 }
 
 /* темная тема */
@@ -769,14 +827,14 @@ html.dark .donation,
 html.dark .header__white,
 html.dark .help,
 html.dark .pets,
-html.dark .header- {
+html.dark .header-logo.white__bg {
   background: #382c24;
   color: #cdcdcd;
 }
 
-html.dark .slider {
-  background: #382c24;
-  border-color: #6b5b52;
+html.dark .theme-slider {
+  background: #a2a5af;
+  border-color: #000000;
 }
 html.dark .slider-button-left,
 html.dark .slider-button-right,
@@ -786,13 +844,43 @@ html.dark .about-text-content p,
 html.dark .help-title,
 html.dark .help-card h4,
 html.dark .donation-info h3,
-html.dark .donation-info h5 {
+html.dark .donation-info h5,
+html.dark .nav-list a,
+html.dark .our__pet__card p,
+html.dark a.pet-card-button,
+html.dark a.pet-category-btn {
   color: #cdcdcd;
 }
+html.dark a.active-category-btn {
+  color: #382c24;
+}
+
+html.dark .header-logo h1 {
+  color: #f1cdb3;
+}
+html.dark .header-logo p {
+  color: #ffffff;
+}
 .theme-switch input {
-  display: none; /* Скрываем чекбокс */
+  display: none;
 }
 .theme-switch {
   display: inline-block;
   cursor: pointer;
+}
+.moon {
+  opacity: 0.3;
+  display: flex;
+  align-items: center;
+}
+.sun {
+  opacity: 1;
+  display: flex;
+  align-items: center;
+}
+html.dark .sun {
+  opacity: 0.4;
+}
+html.dark .moon {
+  opacity: 1;
 }
