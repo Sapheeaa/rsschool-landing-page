@@ -32,6 +32,7 @@ html {
 
 .nav-list {
   display: flex;
+  align-items: center;
   list-style-type: none;
   gap: 35px;
   padding: 0;
@@ -409,8 +410,8 @@ html {
   margin-bottom: 100px;
 }
 .donation-content img {
-  height: 261px;
-  width: 505px;
+  height: auto;
+  width: 490px;
 }
 .donation-info {
   display: flex;
@@ -663,8 +664,9 @@ html {
 /* Планшетная версия (768px - 1279px) */
 @media (min-width: 768px) and (max-width: 1279px) {
   .container {
-    max-width: 1279px;
     padding: 0 30px;
+    max-width: 768px;
+    justify-content: center;
   }
   .header-logo h1 {
     font-size: 35px;
@@ -734,6 +736,8 @@ html {
 
   .donation-content {
     flex-direction: column-reverse;
+    width: 100%;
+    margin: 0 auto;
     gap: 60px;
     margin-top: 78px;
     margin-bottom: 100px;
@@ -741,8 +745,19 @@ html {
 
   .donation-info {
     width: 380px;
-    justify-content: center;
+    align-items: center;
   }
+  .donation-info h3,
+  .donation-info h3 {
+    text-align: center;
+  }
+  .credit-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
   .footer-content {
     flex-direction: column;
     gap: 65px;
@@ -792,6 +807,221 @@ html {
     width: fit-content;
     gap: 32px;
     margin-bottom: 0px;
+  }
+}
+.burger-menu-btn {
+  display: none;
+  text-align: center;
+  border-radius: 50%;
+  border: none;
+  height: 30px;
+  width: 30px;
+  background-color: #f1cdb3;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.burger-menu-btn:hover {
+  transform: translateY(-3px);
+}
+
+@media (min-width: 380px) and (max-width: 767px) {
+  .nav-list .nav-item:not(:first-child, :nth-child(6)) {
+    display: none;
+  }
+
+  .burger-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+  }
+  .about-content {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+  }
+  .about-text-content,
+  .pets-content,
+  .slider {
+    width: 100%;
+  }
+  .start-screen-image {
+    height: 340px;
+    width: auto;
+  }
+  .start-screen-container h2 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .start-screen-text {
+    font-size: 15px;
+    text-align: center;
+  }
+  .start-scree-button-block {
+    display: flex;
+    justify-content: center;
+  }
+  .nav-list {
+    flex-direction: column-reverse;
+    gap: 13px;
+  }
+  .start-screen-container {
+    align-items: start;
+    padding-top: 0px;
+  }
+  .start-screen-content {
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+  .about-text-content h3 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .about-text-content p {
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+  }
+  .about-pet-image {
+    width: 260px;
+    height: 353px;
+    margin-right: 0px;
+  }
+  .pets-cards .pet-card:not(:nth-child(0), :nth-child(1)) {
+    display: none;
+  }
+  .pet-card {
+    width: 190px;
+    height: auto;
+    margin: 0 20px;
+  }
+  .slider-button-left,
+  .slider-button-right {
+    width: 45px;
+    height: 45px;
+  }
+  .pet-card-button {
+    padding: 9px 25px;
+    font-size: 18px;
+  }
+  .pets-content-button {
+    margin-top: 0px;
+  }
+  .pets-text {
+    margin-bottom: 0px;
+  }
+  .pet-card-image {
+    width: 190px;
+    height: auto;
+  }
+
+  .pets-text,
+  .help-title,
+  .donation-info h3 {
+    font-size: 25px;
+    text-align: center;
+  }
+}
+
+/* Планшетная версия второй странички (768px - 1279px) */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .our__pets .our__pet__card:not(:nth-child(1), :nth-child(2), :nth-child(3), :nth-child(4)) {
+    display: none;
+  }
+  .our__pets__cards {
+    grid-template-columns: repeat(2, 270px);
+    gap: 40px;
+  }
+}
+
+@media (min-width: 380px) and (max-width: 767px) {
+  .our__pets .our__pet__card:not(:nth-child(1), :nth-child(2)) {
+    display: none;
+  }
+  .our__pets__cards {
+    grid-template-columns: repeat(1, 270px);
+    gap: 40px;
+  }
+  .pets-text {
+    width: auto;
+    text-align: center;
+  }
+  .pet-category-btn {
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+  }
+  .footer-content,
+  .footer-content-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .help-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 55px 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .help-card {
+    grid-column: auto !important;
+    transform: none !important;
+    width: 100%;
+  }
+
+  .help-card h4,
+  .credit-card-number h4 {
+    font-size: 18px;
+  }
+  .credit-card-number {
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .donation-content {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 60px;
+  }
+  .donation-content img {
+    width: 100%;
+    height: auto;
+  }
+  .credit-card-ico img {
+    width: auto;
+    height: 20px;
+  }
+  .donation-info {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-content-info-contacts h3,
+  .footer-content-info-locations h3 {
+    font-size: 25px;
+  }
+  .footer-links h4,
+  .footer-phone {
+    font-size: 18px;
   }
 }
 
