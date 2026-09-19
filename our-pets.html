@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+   <link rel="icon" href="img/fav.jpg">
+    <title>Cozy House</title>
+  </head>
+  <body>
+    <!-- ОБЕРТКА С ФОНОМ ДЛЯ ШАПКИ И ПЕРВОГО ЭКРАНА -->
+    <div class="top-background-wrapper white__bg">
+      <header class="header header__white">
+        <div class="header-container">
+          <div class="header-logo white__bg">
+            <a href="index.html" class="header-logo-link">
+              <h1>Cozy House</h1>
+              <p>Shelter for pets in Boston</p>
+            </a>
+          </div>
+          <nav class="header-navigation">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <label class="theme-switch">
+                  <input type="checkbox" id="theme-toggle">
+                  <span class="theme-slider">
+                    <span class="sun"><img src="img/Sun.png" alt="sun"></span>
+                    <span class="moon"><img src="img/Moon.svg" alt="moon"></span>
+                  </span>
+                </label>
+              </li>
+              <li class="nav-item"><a href="index.html#about">About the Shelter</a></li>
+              <li class="nav-item"><a href="our-pets.html">Our pets</a></li>
+              <li class="nav-item"><a href="index.html#help">Help the shelter</a></li>
+              <li class="nav-item"><a href="index.html#donation">Contacts</a></li>
+              <li class="nav-item"><button class="burger-menu-btn show-on-mobile">☰</button></li>
+
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="pets">
+          <div class="container">
+            <div class="pets-content">
+              <h3 class="pets-text">
+                Our friends who<br />
+                are looking for a house
+              </h3>
+              <nav class="pets-category">
+                <a href="#" class="pet-category-btn">Cats</a>
+                <a href="#" class="pet-category-btn">Dogs</a>
+                <a href="#" class="pet-category-btn active-category-btn">Both</a>
+
+              </nav>
+            
+              <div class="our__pets">
+                <div class="our__pets__cards">
+                  <div class="our__pet__card">
+                    <img src="img/pets-katrine.png" alt="фото" class="pet-card-image" />
+                    <p>Katrine</p>
+                    <p>2 years old.<br><br>Cat<br><br>Temperament: Calm, affectionate, and independent. A true aristocrat.</p>
+                    <a href="#" class="pet-card-button button__white_bg">Learn more</a>
+                  </div>
+                  <div class="our__pet__card">
+                    <img src="img/pets-jennifer.png" alt="фото" class="pet-card-image" />
+                    <p>Jennifer</p>
+                    <p>3 years old.<br><br>Dog<br><br>Temperament: Energetic, loyal, and very smart dog.</p>
+
+                    <a href="#" class="pet-card-button button__white_bg">Learn more</a>
+                  </div>
+                  <div class="our__pet__card">
+                    <img src="img/pets-woody.png" alt="фото" class="pet-card-image" />
+                    <p>Woody</p>
+                    <p>4 years old.<br><br>Dog<br><br>Temperament: Cheerful puppy-teenager full of energy.</p>
+
+                    <a href="#" class="pet-card-button button__white_bg">Learn more</a>
+                  </div>
+                  <div class="our__pet__card">
+                    <img src="img/pets-sophia.png" alt="фото" class="pet-card-image" />
+                    <p>Sophia</p>
+                    <p>2 years old.<br><br>Dog<br><br>Temperament: Kind, quiet, and slightly shy girl.</p>
+
+                    <a href="#" class="pet-card-button button__white_bg">Learn more</a>
+                  </div>
+                  <div class="our__pet__card">
+                    <img src="img/pets-timmy.png" alt="фото" class="pet-card-image" />
+                    <p>Timmy</p>
+                    <p>1 year old.<br><br>Cat<br><br>Temperament: Good-natured couch potato and a big fan of coziness.</p>
+
+                    <a href="#" class="pet-card-button button__white_bg">Learn more</a>
+                  </div>
+                  <div class="our__pet__card">
+                    <img src="img/pets-charly.png" alt="фото" class="pet-card-image" />
+                    <p>Charly</p>
+                    <p>1 year old.<br><br>Dog<br><br>Temperament: Cheerful puppy-teenager full of energy.</p>
+
+                    <a href="#" class="pet-card-button button__white_bg">Learn more</a>
+                  </div>
+                  <div class="our__pet__card">
+                    <img src="img/pets-scarlet.png" alt="фото" class="pet-card-image" />
+                    <p>Scarlet</p>
+                    <p>5 years old.<br><br>Dog<br><br>Temperament: Affectionate, balanced, and obedient dog.</p>
+
+                    <a href="#" class="pet-card-button button__white_bg">Learn more</a>
+                  </div>
+                  <div class="our__pet__card">
+                    <img src="img/pets-freddie.png" alt="фото" class="pet-card-image" />
+                    <p>Freddie</p>
+                    <p>3 years old.<br><br>Cat<br><br>Temperament: Playful, curious, and very sociable girl.</p>
+
+                    <a href="#" class="pet-card-button button__white_bg">Learn more</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Пагинация слайдера -->
+              <div class="slider-nav">
+                <button class="nav-btn-left">
+                  <span class="nav-btn-icon">&lt;&lt;</span>
+                </button>
+                <button class="nav-btn-left">
+                  <span class="nav-btn-icon">&lt;</span>
+                </button>
+                <button class="nav-btn-active-page">
+                  <span class="nav-btn-icon">1</span>
+                </button>
+                <button class="nav-btn-right">
+                  <span class="nav-btn-icon">&gt;</span>
+                </button>
+                <button class="nav-btn-right">
+                  <span class="nav-btn-icon">&gt;&gt;</span>
+                </button>
+              </div>
+
+            </div> <!-- Закрыли pets-content -->
+          </div>   <!-- Закрыли container -->
+        </section> <!-- Закрыли section -->
+      </main>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-content-info">
+            <div class="footer-content-info-contacts">
+              <h3>
+                For questions <br />
+                and suggestions
+              </h3>
+              <a href="#!" class="footer-links">
+                <div class="credit-card-ico">
+                  <img src="img/icon-email.svg" alt="ico" />
+                </div>
+                <h4>email@Shelter.com</h4>
+              </a>
+              <a href="#!" class="footer-links">
+                <div class="footer-links-ico">
+                  <img src="img/icon-phone.svg" alt="ico" />
+                </div>
+                <h4>+13 374 567 75 54</h4>
+              </a>
+            </div>
+            <div class="footer-content-info-locations">
+              <h3>
+                We are waiting <br />
+                for your visit
+              </h3>
+              <a href="#!" class="footer-links">
+                <div class="footer-links-ico">
+                  <img src="img/icon-marker.png" alt="ico" />
+                </div>
+                <h4>
+                  1 Central Street, Boston<br />
+                  (entrance from the store)
+                </h4>
+              </a>
+              <a href="#!" class="footer-links">
+                <div class="footer-links-ico">
+                  <img src="img/icon-marker.png" alt="ico" />
+                </div>
+                <h4>18 South Park, London</h4>
+              </a>
+            </div>
+          </div>
+          
+          <div class="footer-content-image">
+            <img src="img/footer-puppy.png" alt="фото" />
+          </div>
+          
+        </div>
+      </footer>
+          <script src="script.js"></script>
+
+  </body>
+</html>
