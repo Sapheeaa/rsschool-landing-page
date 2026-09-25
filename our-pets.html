@@ -56,61 +56,22 @@
               </nav>
             
               <div class="our__pets">
-                <div class="our__pets__cards">
-                  <div class="our__pet__card">
-                    <img src="img/pets-katrine.png" alt="фото" class="pet-card-image" />
-                    <p>Katrine</p>
-                    <p>2 years old.<br><br>Cat<br><br>Temperament: Calm, affectionate, and independent. A true aristocrat.</p>
-                    <a href="#" class="pet-card-button button__white_bg">Learn more</a>
+                <div class="our__pets__cards" id="petsGrid">
+                  <div class="our__pet__card" data-id="2">
                   </div>
-                  <div class="our__pet__card">
-                    <img src="img/pets-jennifer.png" alt="фото" class="pet-card-image" />
-                    <p>Jennifer</p>
-                    <p>3 years old.<br><br>Dog<br><br>Temperament: Energetic, loyal, and very smart dog.</p>
-
-                    <a href="#" class="pet-card-button button__white_bg">Learn more</a>
+                  <div class="our__pet__card" data-id="1">
                   </div>
-                  <div class="our__pet__card">
-                    <img src="img/pets-woody.png" alt="фото" class="pet-card-image" />
-                    <p>Woody</p>
-                    <p>4 years old.<br><br>Dog<br><br>Temperament: Cheerful puppy-teenager full of energy.</p>
-
-                    <a href="#" class="pet-card-button button__white_bg">Learn more</a>
+                  <div class="our__pet__card" data-id="3">
                   </div>
-                  <div class="our__pet__card">
-                    <img src="img/pets-sophia.png" alt="фото" class="pet-card-image" />
-                    <p>Sophia</p>
-                    <p>2 years old.<br><br>Dog<br><br>Temperament: Kind, quiet, and slightly shy girl.</p>
-
-                    <a href="#" class="pet-card-button button__white_bg">Learn more</a>
+                  <div class="our__pet__card" data-id="4">
                   </div>
-                  <div class="our__pet__card">
-                    <img src="img/pets-timmy.png" alt="фото" class="pet-card-image" />
-                    <p>Timmy</p>
-                    <p>1 year old.<br><br>Cat<br><br>Temperament: Good-natured couch potato and a big fan of coziness.</p>
-
-                    <a href="#" class="pet-card-button button__white_bg">Learn more</a>
+                  <div class="our__pet__card" data-id="5">
                   </div>
-                  <div class="our__pet__card">
-                    <img src="img/pets-charly.png" alt="фото" class="pet-card-image" />
-                    <p>Charly</p>
-                    <p>1 year old.<br><br>Dog<br><br>Temperament: Cheerful puppy-teenager full of energy.</p>
-
-                    <a href="#" class="pet-card-button button__white_bg">Learn more</a>
+                  <div class="our__pet__card" data-id="6">
                   </div>
-                  <div class="our__pet__card">
-                    <img src="img/pets-scarlet.png" alt="фото" class="pet-card-image" />
-                    <p>Scarlet</p>
-                    <p>5 years old.<br><br>Dog<br><br>Temperament: Affectionate, balanced, and obedient dog.</p>
-
-                    <a href="#" class="pet-card-button button__white_bg">Learn more</a>
+                  <div class="our__pet__card" data-id="7">
                   </div>
-                  <div class="our__pet__card">
-                    <img src="img/pets-freddie.png" alt="фото" class="pet-card-image" />
-                    <p>Freddie</p>
-                    <p>3 years old.<br><br>Cat<br><br>Temperament: Playful, curious, and very sociable girl.</p>
-
-                    <a href="#" class="pet-card-button button__white_bg">Learn more</a>
+                  <div class="our__pet__card" data-id="8">
                   </div>
                 </div>
               </div>
@@ -189,6 +150,16 @@
           
         </div>
       </footer>
+          <!-- МОДАЛЬНОЕ ОКНО --> 
+<div class="modal" id="petModal">
+  <div class="modal-overlay" data-close></div>
+  <div class="modal-window">
+    <button class="modal-close" data-close aria-label="Close">×</button>
+    <div class="modal-body" id="modalBody">
+    </div>
+  </div>
+</div>
+
           <script src="script.js"></script>
 
   </body>

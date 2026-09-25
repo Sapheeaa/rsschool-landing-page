@@ -95,17 +95,17 @@
               <div class="slider-button-left">←</div>
 
               <div class="pets-cards">
-                <div class="pet-card">
+                <div class="pet-card" data-id="2">
                   <img src="img/pets-katrine.png" alt="фото" class="pet-card-image" />
                   <p>Katrine</p>
                   <a href="#" class="pet-card-button">Learn more</a>
                 </div>
-                <div class="pet-card">
+                <div class="pet-card" data-id="1">
                   <img src="img/pets-jennifer.png" alt="фото" class="pet-card-image" />
                   <p>Jennifer</p>
                   <a href="#" class="pet-card-button">Learn more</a>
                 </div>
-                <div class="pet-card pet-card-woody">
+                <div class="pet-card pet-card-woody" data-id="3">
                   <img src="img/pets-woody.png" alt="фото" class="pet-card-image" />
                   <p>Woody</p>
                   <a href="#" class="pet-card-button">Learn more</a>
@@ -248,6 +248,15 @@
         </div>
       </div>
     </footer>
+    <!-- МОДАЛЬНОЕ ОКНО --> 
+<div class="modal" id="petModal">
+  <div class="modal-overlay" data-close></div>
+  <div class="modal-window">
+    <button class="modal-close" data-close aria-label="Close">×</button>
+    <div class="modal-body" id="modalBody">
+    </div>
+  </div>
+</div>
     <script src="script.js"></script>
   </body>
 </html>

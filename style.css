@@ -1114,3 +1114,115 @@ html.dark .sun {
 html.dark .moon {
   opacity: 1;
 }
+/* ---------- Модальное окно ---------- */
+.modal {
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.modal-open {
+  display: flex;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  background: rgba(41, 41, 41, 0.6);
+}
+.modal-window {
+  position: relative;
+  background: #fafafa;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 90%;
+  padding: 50px 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: 2px solid #292929;
+  color: #292929;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.modal-close:hover {
+  background: #292929;
+  color: #fafafa;
+  transition: transform 0.3s ease;
+}
+.modal-body {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.modal-body img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+.modal-body h2 {
+  font-size: 32px;
+  margin: 0 0 8px;
+  color: #292929;
+}
+
+.modal-body .modal-breed {
+  font-size: 18px;
+  color: #292929;
+  margin: 0 0 24px;
+}
+.modal-body .modal-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #292929;
+  margin: 0 0 24px;
+}
+
+.modal-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.modal-body li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #292929;
+}
+
+@media (min-width: 379px) and (max-width: 767px) {
+  .modal-window {
+    width: 80%;
+    max-width: 750px;
+    padding: 30px 20px;
+  }
+  .modal-body {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .modal-window {
+    width: 85%;
+    max-width: 800px;
+    padding: 40px 30px;
+  }
+}
