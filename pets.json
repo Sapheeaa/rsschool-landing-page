@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "name": "Jennifer",
+    "image": "img/pets-jennifer.png",
+    "breed": "Dog - Labrador",
+    "category": "dog",
+    "description": "Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to happily play all day indoors if that's what you would prefer.",
+    "age": "2 months",
+    "inoculations": ["none"],
+    "diseases": ["none"],
+    "parasites": ["none"]
+  },
+  {
+    "id": 2,
+    "name": "Katrine",
+    "image": "img/pets-katrine.png",
+    "breed": "Cat",
+    "category": "cat",
+
+    "description": "Katrine is a calm, affectionate, and independent cat. A true aristocrat who enjoys quiet evenings and warm laps.",
+    "age": "2 years",
+    "inoculations": ["none"],
+    "diseases": ["none"],
+    "parasites": ["none"]
+  },
+  {
+    "id": 3,
+    "name": "Woody",
+    "image": "img/pets-woody.png",
+    "breed": "Dog",
+    "category": "dog",
+    "description": "Woody is a cheerful puppy-teenager full of energy. He loves long walks, playing fetch, and making new friends.",
+    "age": "4 years",
+    "inoculations": ["none"],
+    "diseases": ["none"],
+    "parasites": ["none"]
+  },
+  {
+    "id": 4,
+    "name": "Sophia",
+    "image": "img/pets-sophia.png",
+    "breed": "Dog - Shih Tzu",
+    "category": "dog",
+
+    "description": "Sophia is a kind, quiet, and slightly shy girl.",
+    "age": "2 years",
+    "inoculations": ["none"],
+    "diseases": ["none"],
+    "parasites": ["none"]
+  },
+  {
+    "id": 5,
+    "name": "Timmy",
+    "image": "img/pets-timmy.png",
+    "breed": "Cat - British Shorthair",
+    "category": "cat",
+
+    "description": "Timmy is a good-natured couch potato and a big fan of coziness.",
+    "age": "1 year",
+    "inoculations": ["none"],
+    "diseases": ["none"],
+    "parasites": ["none"]
+  },
+  {
+    "id": 6,
+    "name": "Charly",
+    "image": "img/pets-charly.png",
+    "breed": "Dog - Beagle",
+    "category": "dog",
+
+    "description": "Charly is a cheerful puppy-teenager full of energy.",
+    "age": "1 year",
+    "inoculations": ["none"],
+    "diseases": ["none"],
+    "parasites": ["none"]
+  },
+  {
+    "id": 7,
+    "name": "Scarlet",
+    "image": "img/pets-scarlet.png",
+    "breed": "Dog - Dachshund",
+    "category": "dog",
+
+    "description": "Scarlet is an affectionate, balanced, and obedient dog.",
+    "age": "5 years",
+    "inoculations": ["none"],
+    "diseases": ["none"],
+    "parasites": ["none"]
+  },
+  {
+    "id": 8,
+    "name": "Freddie",
+    "image": "img/pets-freddie.png",
+    "breed": "Cat - Scottish Fold",
+    "category": "cat",
+
+    "description": "Freddie is a playful, curious, and very sociable girl.",
+    "age": "3 years",
+    "inoculations": ["none"],
+    "diseases": ["none"],
+    "parasites": ["none"]
+  }
+]
