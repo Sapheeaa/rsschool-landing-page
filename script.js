@@ -22,15 +22,20 @@ toggleCheckbox.addEventListener("change", function () {
 //модальное окно
 
 let petsData = [];
+const sliderTrack = document.getElementById("sliderTrack");
+const sliderPrev = document.getElementById("sliderPrev");
+const sliderNext = document.getElementById("sliderNext");
 const modal = document.getElementById("petModal");
 const modalBody = document.getElementById("modalBody");
+
 fetch("pets.json")
   .then(function (response) {
     return response.json();
   })
   .then(function (data) {
     petsData = data;
-    renderPets(petsData);
+    renderVisiblePets(petsData);
+    renderSlider();
   })
   .catch(function (error) {
     console.error("Ошибка при загрузке pets.json:", error);
@@ -113,6 +118,13 @@ function createHtmlCard(pet) {
   `;
 }
 
+function renderSlider() {
+  if (!sliderTrack) return; // если слайдера на странице нет — выходим
+  const sliderPets = petsData.slice(0, 5); // берём первых 3 питомца
+  sliderTrack.innerHTML = sliderPets.map(createIndexCards).join("");
+  attachCardHandlers(); // навешиваем обработчики на кнопки «Learn more»
+}
+
 //рендер карточек
 function renderPets(pets) {
   if (!petsGrid) return; //выходим из функции нисего не делаем
@@ -140,35 +152,119 @@ function filterCards(category) {
 function switchCategory(category) {
   //параметр - слово на кнопке
   currentCategory = category;
-
+  visibleCount = CARDS_PER_STEP; // сброс при смене категории
   document.querySelectorAll(".pet-category-btn").forEach(function (btn) {
-    if (btn.textContent.trimEnd() === category) {
+    if (btn.textContent.trim() === category) {
       btn.classList.add("active-category-btn");
     } else {
       btn.classList.remove("active-category-btn");
     }
   });
   const filtered = filterCards(category);
-  renderPets(filtered);
+  renderVisiblePets(filtered);
 }
 //вешаем обработчик на кнопки категорий
 document.querySelectorAll(".pet-category-btn").forEach(function (btn) {
   btn.addEventListener("click", function (event) {
-    event.preventDefault; // Отменяем переход по href="#" — иначе страница прыгнет вверх
+    event.preventDefault(); // Отменяем переход по href="#" — иначе страница прыгнет вверх
     switchCategory(btn.textContent.trim());
   });
 });
 
-//JSON нужно скачать и распарсить
+//создание карточек на главной
+function createIndexCards(pet) {
+  return `
+  <div class ="pet-card" data-id ="${pet.id}">
+  <img src ="${pet.image}" alt ="${pet.name}" class="pet-card-image">
+  <p>${pet.name}</p>
+  <a href ="#" class="pet-card-button">Learn more</a>
+  </div>
+  `;
+}
 
-// fetch("pets.json")
-//   .then(function (response) {
-//     return response.json();
-//   })
-//   .then(function (data) {
-//     petsData = data;
-//     renderPets(petsData);
-//   })
-//   .catch(function (error) {
-//     console.error("Ошибка при загрузке pets.json:", error);
-//   });
+// СЛАЙДЕР НА ГЛАВНОЙ
+if (sliderTrack && sliderPrev && sliderNext) {
+  const CARD_WIDTH = 270;
+  const GAP = 40;
+  const STEP = CARD_WIDTH + GAP;
+  const VISIBLE_COUNT = 3;
+
+  // Стартовая позиция — средняя, чтобы были скрытые карточки слева и справа
+  let currentIndex = 1;
+
+  // Сдвигает трек на нужное число пикселей
+  function updateSlider() {
+    const offset = -currentIndex * STEP;
+    sliderTrack.style.transform = `translateX(${offset}px)`;
+  }
+
+  // Обновляет активность кнопок
+  function updateButtons() {
+    const cards = sliderTrack.querySelectorAll(".pet-card");
+    const maxIndex = Math.max(0, cards.length - VISIBLE_COUNT);
+
+    if (currentIndex <= 0) {
+      sliderPrev.classList.add("disabled");
+    } else {
+      sliderPrev.classList.remove("disabled");
+    }
+
+    if (currentIndex >= maxIndex) {
+      sliderNext.classList.add("disabled");
+    } else {
+      sliderNext.classList.remove("disabled");
+    }
+  }
+
+  // Клик «→» — сдвиг влево (показать правую карточку)
+  sliderNext.addEventListener("click", function () {
+    const cards = sliderTrack.querySelectorAll(".pet-card");
+    const maxIndex = Math.max(0, cards.length - VISIBLE_COUNT);
+
+    if (currentIndex < maxIndex) {
+      currentIndex = currentIndex + 1;
+      updateSlider();
+      updateButtons();
+    }
+  });
+
+  // Клик «←» — сдвиг вправо (показать левую карточку)
+  sliderPrev.addEventListener("click", function () {
+    if (currentIndex > 0) {
+      currentIndex = currentIndex - 1;
+      updateSlider();
+      updateButtons();
+    }
+  });
+
+  // Применяем стартовое состояние
+  updateSlider();
+  updateButtons();
+}
+
+//кнопка для показа большего кол-ва карточек
+let visibleCount = 4;
+const CARDS_PER_STEP = 4;
+const showMoreBtn = document.getElementById("showMoreBtn");
+
+function renderVisiblePets(pets) {
+  const visible = pets.slice(0, visibleCount);
+  renderPets(visible);
+  if (!showMoreBtn) return;
+  // показать/скрыть кнопку
+  if (visibleCount < pets.length) {
+    showMoreBtn.style.display = "inline-block";
+  } else {
+    showMoreBtn.style.display = "none";
+  }
+}
+
+//обработчик кнопки
+
+if (showMoreBtn) {
+  showMoreBtn.addEventListener("click", function () {
+    visibleCount = visibleCount + CARDS_PER_STEP;
+    const filtered = filterCards(currentCategory);
+    renderVisiblePets(filtered);
+  });
+}
