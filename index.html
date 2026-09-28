@@ -53,7 +53,7 @@
               </p>
             </div>
             <div class="start-scree-button-block">
-              <a href="#" class="start-screen-button">Make a friend</a>
+              <a href="our-pets.html" class="start-screen-button">Make a friend</a>
             </div>
           </div>
           <img src="img/dog1.png" alt="Собака" class="start-screen-image" />
@@ -91,29 +91,15 @@
               Our friends who<br />
               are looking for a house
             </h3>
-            <div class="slider">
-              <div class="slider-button-left">←</div>
-
-              <div class="pets-cards">
-                <div class="pet-card">
-                  <img src="img/pets-katrine.png" alt="фото" class="pet-card-image" />
-                  <p>Katrine</p>
-                  <a href="#" class="pet-card-button">Learn more</a>
-                </div>
-                <div class="pet-card">
-                  <img src="img/pets-jennifer.png" alt="фото" class="pet-card-image" />
-                  <p>Jennifer</p>
-                  <a href="#" class="pet-card-button">Learn more</a>
-                </div>
-                <div class="pet-card pet-card-woody">
-                  <img src="img/pets-woody.png" alt="фото" class="pet-card-image" />
-                  <p>Woody</p>
-                  <a href="#" class="pet-card-button">Learn more</a>
-                </div>
-              </div>
-              <div class="slider-button-right">→</div>
-            </div>
-            <a href="#" class="pets-content-button">Get to know the rest</a>
+            <div class="slider-wrapper">
+  <div class="slider-button-left" id="sliderPrev">←</div>
+  <div class="slider">
+    <div class="pets-cards" id="sliderTrack"></div>
+  </div>
+  <div class="slider-button-right" id="sliderNext">→</div>
+</div>
+  
+            <a href="our-pets.html" class="pets-content-button">Get to know the rest</a>
           </div>
         </div>
       </section>
@@ -248,6 +234,15 @@
         </div>
       </div>
     </footer>
+    <!-- МОДАЛЬНОЕ ОКНО --> 
+<div class="modal" id="petModal">
+  <div class="modal-overlay" data-close></div>
+  <div class="modal-window">
+    <button class="modal-close" data-close aria-label="Close">×</button>
+    <div class="modal-body" id="modalBody">
+    </div>
+  </div>
+</div>
     <script src="script.js"></script>
   </body>
 </html>
